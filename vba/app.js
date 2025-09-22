@@ -1405,7 +1405,7 @@ async function loadRom() {
 
   console.log("body style", body.style);
 
-  var resp = await fetch("/build/rom.gba")
+  var resp = await fetch("build/rom.gba")
   var arrayBuffer = await resp.arrayBuffer()
   console.log("Rom Length", arrayBuffer.byteLength);
   while (!isWasmReady) {
