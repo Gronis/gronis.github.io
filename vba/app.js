@@ -1400,11 +1400,6 @@ async function loadRom() {
   var clickToPlay = document.getElementById('click-to-play')
   clickToPlay.hidden = true;
 
-  var body = document.getElementsByTagName('body');
-  body.style = "background-color: #353535 !important;";
-
-  console.log("body style", body.style);
-
   var resp = await fetch("build/rom.gba")
   var arrayBuffer = await resp.arrayBuffer()
   console.log("Rom Length", arrayBuffer.byteLength);
