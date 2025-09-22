@@ -610,9 +610,8 @@ if (isSaveSupported) {
     });
 }
 
-
 function processGamepadInput() {
-    if (currentConnectedGamepad < 0) {
+    if (currentConnectedGamepad < 0 || currentConnectedGamepad == undefined) {
         return
     }
     var gamepad = navigator.getGamepads()[currentConnectedGamepad]
